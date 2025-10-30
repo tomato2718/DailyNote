@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-*: initial;
+  --color-accent-1: var(--accent-1);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --color-accent-4: var(--accent-4);
+  --color-accent-5: var(--accent-5);
+  --color-accent-6: var(--accent-6);
+  --color-accent-7: var(--accent-7);
+  --color-accent-8: var(--accent-8);
+  --color-accent-9: var(--accent-9);
+  --color-accent-10: var(--accent-10);
+  --color-accent-11: var(--accent-11);
+  --color-accent-12: var(--accent-12);
+  --color-grayscale-1: var(--grayscale-1);
+  --color-grayscale-2: var(--grayscale-2);
+  --color-grayscale-3: var(--grayscale-3);
+  --color-grayscale-4: var(--grayscale-4);
+  --color-grayscale-5: var(--grayscale-5);
+  --color-grayscale-6: var(--grayscale-6);
+  --color-grayscale-7: var(--grayscale-7);
+  --color-grayscale-8: var(--grayscale-8);
+  --color-grayscale-9: var(--grayscale-9);
+  --color-grayscale-10: var(--grayscale-10);
+  --color-grayscale-11: var(--grayscale-11);
+  --color-grayscale-12: var(--grayscale-12);
+  --color-black: #151515;
+  --color-white: #ffffff;
+}
+
+:root {
+  --accent-1: #fcfdff;
+  --accent-2: #f5f9ff;
+  --accent-3: #eaf2ff;
+  --accent-4: #dcebff;
+  --accent-5: #cbe1ff;
+  --accent-6: #b8d4ff;
+  --accent-7: #9fc2fb;
+  --accent-8: #7baaf6;
+  --accent-9: #3b82f6;
+  --accent-10: #2c74e9;
+  --accent-11: #256cde;
+  --accent-12: #123164;
+  --grayscale-1: #fbfcfe;
+  --grayscale-2: #f8f9fd;
+  --grayscale-3: #edf0f6;
+  --grayscale-4: #e4e8f0;
+  --grayscale-5: #dce1eb;
+  --grayscale-6: #d4dae5;
+  --grayscale-7: #c8cfdd;
+  --grayscale-8: #b3bcce;
+  --grayscale-9: #858ea0;
+  --grayscale-10: #7b8494;
+  --grayscale-11: #5e6572;
+  --grayscale-12: #1c202a;
+}
+
+.dark {
+  --accent-1: #0b111c;
+  --accent-2: #101825;
+  --accent-3: #122647;
+  --accent-4: #123061;
+  --accent-5: #1a3c74;
+  --accent-6: #244985;
+  --accent-7: #2f589a;
+  --accent-8: #3868b8;
+  --accent-9: #3b82f6;
+  --accent-10: #2e75e8;
+  --accent-11: #85b5ff;
+  --accent-12: #d0e2ff;
+  --grayscale-1: #111113;
+  --grayscale-2: #19191b;
+  --grayscale-3: #222325;
+  --grayscale-4: #292a2e;
+  --grayscale-5: #303136;
+  --grayscale-6: #393a40;
+  --grayscale-7: #46484f;
+  --grayscale-8: #5f606a;
+  --grayscale-9: #6c6e79;
+  --grayscale-10: #797b86;
+  --grayscale-11: #b2b3bd;
+  --grayscale-12: #eeeef0;
+}
