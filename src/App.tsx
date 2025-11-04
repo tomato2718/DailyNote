@@ -21,9 +21,9 @@ export default App;
 
 function MainContent({ dirPath }: { dirPath: string }) {
   return (
-    <div className="flex">
+    <div className="flex h-full">
       <Navigator />
-      <span>{dirPath}</span>
+      <div className="grows p-2">{dirPath}</div>
     </div>
   );
 }
