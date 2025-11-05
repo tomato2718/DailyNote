@@ -21,26 +21,24 @@ pub fn get_tree(directory: &str) -> Result<DirectoryTree, ErrorMessage> {
 
 fn parse_root(root_dir: ReadDir) -> DirectoryTree {
     let regex = Regex::new("[0-9]{4}").unwrap();
-    HashMap::from_iter(
-        root_dir
-            .flatten()
-            .filter(|child| child.path().is_dir())
-            .filter(|child| regex.is_match(&child.file_name().into_string().unwrap()))
-            .map(|year| (year.file_name().into_string().unwrap(), parse_year(year))),
-    )
+    root_dir
+        .flatten()
+        .filter(|child| child.path().is_dir())
+        .filter(|child| regex.is_match(child.file_name().to_str().unwrap()))
+        .map(|year| (year.file_name().into_string().unwrap(), parse_year(year)))
+        .collect()
 }
 
 fn parse_year(year: DirEntry) -> MonthlyData {
     let regex = Regex::new("0[1-9]|1[0-2]").unwrap();
-    HashMap::from_iter(
-        year.path()
-            .read_dir()
-            .unwrap()
-            .flatten()
-            .filter(|child| child.path().is_dir())
-            .filter(|child| regex.is_match(&child.file_name().into_string().unwrap()))
-            .map(|month| (month.file_name().into_string().unwrap(), parse_month(month))),
-    )
+    year.path()
+        .read_dir()
+        .unwrap()
+        .flatten()
+        .filter(|child| child.path().is_dir())
+        .filter(|child| regex.is_match(child.file_name().to_str().unwrap()))
+        .map(|month| (month.file_name().into_string().unwrap(), parse_month(month)))
+        .collect()
 }
 
 fn parse_month(month: DirEntry) -> DailyData {
